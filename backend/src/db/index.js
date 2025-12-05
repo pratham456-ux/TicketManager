@@ -1,6 +1,8 @@
-
+import dotenv from "dotenv"
 import mongoose from "mongoose";
+dotenv.config();
 
+console.log("DB FILE IS LOADED SUCCESSFULLY");
 
 const connectDB = async () => {
     try {
@@ -15,4 +17,4 @@ const connectDB = async () => {
 
     }
 }
-export default connectDB;
+export default connectDB ;

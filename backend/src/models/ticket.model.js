@@ -2,9 +2,18 @@ import mongoose from "mongoose";
 
 const ticketSchema = new mongoose.Schema(
   {
-    title:              { type: String, required: true },
-    description:        { type: String, required: true },
-    reported_by:        { type: String, required: true },
+    title: { 
+      type: String, 
+      required: true 
+    },
+    description: { 
+      type: String, 
+      required: true 
+    },
+    reported_by: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "User",
+    },
 
     status: {
       type: String,
@@ -23,7 +32,7 @@ const ticketSchema = new mongoose.Schema(
       enum: ["Low", "Medium", "High"],
       default: null
     },
-    is_deleted:       { type: Boolean, default: false }
+    is_deleted: { type: Boolean, default: false }
   },
   { timestamps: true }
 );
