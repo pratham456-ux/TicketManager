@@ -1,0 +1,43 @@
+# -------------------------
+# Node Backend
+# -------------------------
+backend/node_modules/
+backend/package-lock.json
+backend/.env
+
+# Logs
+*.log
+logs/
+
+# Build artifacts
+dist/
+build/
+
+# -------------------------
+# Python ML Service
+# -------------------------
+ml-service/__pycache__/
+ml-service/*.pyc
+ml-service/*.pyo
+ml-service/*.pyd
+ml-service/.env
+ml-service/venv/
+ml-service/env/
+ml-service/model.pkl
+ml-service/tfidf.pkl
+
+# Python virtual environments
+venv/
+.venv/
+ENV/
+env/
+
+# -------------------------
+# OS / Editor files
+# -------------------------
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.swo
